@@ -21,8 +21,8 @@ server {
     server_name laravel.test;
     root /var/www/laravel/public;
     # OLD CODE
-
     # NEW CODE
+    # ADD "127.0.0.1 <APP ROOT DIRECTORY>.test" IN "C:\Windows\System32\drivers\etc\hosts"
     server_name <APP ROOT DIRECTORY>.test;
     root /var/www/<APP ROOT DIRECTORY>/public;
     # NEW CODE
