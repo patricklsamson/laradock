@@ -1,7 +1,7 @@
-# THINGS TO CHANGE
-# WORKSPACE
-# PHP-FPM
-# NGINX
+# THINGS TO CHANGE - MULTIPLE PHP VERSIONS SETUP
+# WORKSPACE & PHP-FPM - NEW CONTAINER NAMES (APPEND PHP VERSION) & "LARADOCK_PHP_VERSION"
+# PHP-FPM - "volumes: > ./php-fpm/php<PHP_VERSION>.ini:/usr/local/etc/php/php.ini" & "depends_on"
+# NGINX - NEW "depends_on"
 
 version: '3.5'
 
