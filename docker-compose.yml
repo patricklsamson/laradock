@@ -1,3 +1,6 @@
+# THINGS TO CHANGE
+# WORKSPACE & PHP-FPM & NGINX VERSIONS
+
 version: '3.5'
 
 networks:
