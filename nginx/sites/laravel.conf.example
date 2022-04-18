@@ -1,3 +1,5 @@
+# COPY THIS FILE AND PASTE AS <APP ROOT DIRECTORY>.conf
+
 #server {
 #    listen 80;
 #    server_name laravel.com.co;
@@ -15,8 +17,15 @@ server {
     # ssl_certificate /etc/nginx/ssl/default.crt;
     # ssl_certificate_key /etc/nginx/ssl/default.key;
 
+    # OLD CODE
     server_name laravel.test;
     root /var/www/laravel/public;
+    # OLD CODE
+
+    # NEW CODE
+    server_name <APP ROOT DIRECTORY>.test;
+    root /var/www/<APP ROOT DIRECTORY>/public;
+    # NEW CODE
     index index.php index.html index.htm;
 
     location / {
