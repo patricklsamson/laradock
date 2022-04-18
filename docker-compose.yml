@@ -203,6 +203,7 @@ services:
       links:
         - docker-in-docker
 
+# NEW CODE
 ### Workspace Utilities - <VERSION> ##################################
     workspace-<VERSION>:
       build:
@@ -348,6 +349,7 @@ services:
         - backend
       links:
         - docker-in-docker
+# NEW CODE
 
 ### PHP-FPM ##############################################
     php-fpm:
@@ -457,6 +459,7 @@ services:
       links:
         - docker-in-docker
 
+# NEW CODE
 ### PHP-FPM-<VERSION> ##############################################
     php-fpm-<VERSION>:
       build:
@@ -564,6 +567,7 @@ services:
         - backend
       links:
         - docker-in-docker
+# NEW CODE
 
 ### PHP Worker ############################################
     php-worker:
@@ -673,7 +677,9 @@ services:
         - "${VARNISH_BACKEND_PORT}:81"
       depends_on:
         - php-fpm
+        # NEW CODE
         - php-fpm-<VERSION>
+        # NEW CODE
       networks:
         - frontend
         - backend
