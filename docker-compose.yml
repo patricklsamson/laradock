@@ -1,5 +1,8 @@
 version: '3.5'
 
+# THINGS TO CHANGE
+# NGINX NETWORKS
+
 networks:
   frontend:
     driver: ${NETWORKS_DRIVER}
@@ -420,8 +423,21 @@ services:
       depends_on:
         - php-fpm
       networks:
-        - frontend
-        - backend
+        # OLD CODE
+        # - frontend
+        # - backend
+        # OLD CODE
+        # NEW CODE
+        # FOR GUZZLE COMMUNICATION IN BETWEEN APPS
+        frontend:
+          aliases:
+            - <APP NAME>.test
+            - <APP NAME>.test
+        backend:
+          aliases:
+            - <APP NAME>.test
+            - <APP NAME>.test
+        # NEW CODE
 
 ### OpenResty Server #########################################
     openresty:
